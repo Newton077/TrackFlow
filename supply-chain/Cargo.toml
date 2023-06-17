@@ -1,0 +1,34 @@
+[package]
+name = "supply-chain"
+version = "0.2.0"
+edition = "2021"
+license = "MIT"
+authors = ["Gear Technologies"]
+
+[dependencies]
+supply-chain-io = { path = "io" }
+gstd = { git = "https://github.com/gear-tech/gear.git", rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68" }
+nft-io = { git = "https://github.com/gear-dapps/non-fungible-token.git", tag = "0.2.10" }
+ft-main-io = { git = "https://github.com/gear-dapps/sharded-fungible-token.git", tag = "2.1.1" }
+gear-lib = { git = "https://github.com/gear-dapps/gear-lib.git", tag = "0.3.6" }
+hashbrown = "0.13"
+
+[dev-dependencies]
+gtest = { git = "https://github.com/gear-tech/gear.git", rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68" }
+gstd = { git = "https://github.com/gear-tech/gear.git", rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68", features = ["debug"] }
+gclient = { git = "https://github.com/gear-tech/gear.git", rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68" }
+tokio = "1"
+pretty_assertions = "1"
+supply-chain-state = { path = "state" }
+deploy = { path = "deploy" }
+
+[build-dependencies]
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68" }
+supply-chain-io = { path = "io" }
+
+[features]
+default = ["binary-vendor"]
+binary-vendor = []
+
+[workspace]
+members = ["state", "deploy"]
