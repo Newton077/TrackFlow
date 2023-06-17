@@ -21,6 +21,10 @@ main {
   background: $bgColor url(assets/images/bg.svg);
 }
 
+.cont-background {
+  background: $bgColor url(assets/images/cont.jpg);
+}
+
 .custom-background {
   background-color: gray !important;
 }

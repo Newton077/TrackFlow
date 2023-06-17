@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 function CustomLayout() {
   useEffect(() => {
-    document.body.classList.add('custom-background');
+    document.body.classList.add('cont-background');
   })
 
   return (<div>
